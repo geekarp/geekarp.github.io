@@ -1,0 +1,43 @@
+.container {
+  width: 400px; /* Set a fixed width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+header {
+  text-align: center; /* Center the heading text */
+}
+
+#word,
+#guesses,
+#message {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+#word {
+  text-transform: uppercase; /* Display the word in uppercase */
+}
+
+#hangman-image img {
+  width: 200px; /* Set a width for the hangman image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#message {
+  color: #e84118; /* Red color for messages */
+}
+
+#restart-button {
+  background-color: #3498db; /* Light blue button background */
+  color: #fff; /* White button text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+#restart-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
