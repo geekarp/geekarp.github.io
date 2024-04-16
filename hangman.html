@@ -25,6 +25,25 @@
   </div>
 
   <script src="hangman.js"></script>
+  <script>
+    const restartButton = document.getElementById('restart-button');
+
+    restartButton.addEventListener('click', () => {
+      // Reset game state
+      selectedWord = words[Math.floor(Math.random() * words.length)];
+      guessedLetters = [];
+      remainingGuesses = 6;
+
+      // Update the UI
+      displayWord();
+      displayGuesses();
+      displayMessage(''); // Clear any existing messages
+      updateHangmanImage(remainingGuesses);
+
+      // Re-enable key event listener
+      document.addEventListener('keydown', handleGuess);
+    });
+  </script>
 </body>
 
 </html>
