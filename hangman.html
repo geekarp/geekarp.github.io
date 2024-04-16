@@ -2,17 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cypher Text Hangman</title>
-    <link rel="stylesheet" href="styles.css"> </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cypher Text Hangman</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hangmanstyle.css">
+</head>
 
 <body>
-    
+
+  <div class="container">
+    <header>
+      <h1>Cypher Text Hangman</h1>
+    </header>
+
     <div id="hangman-image"></div>
-    <div id=word> </div>
-    <div id=guesses> </div>
-    <div id=message> </div>
-    <script src="hangman.js"></script> </body>
+    <div id="word"></div>
+    <div id="guesses"></div>
+    <div id="message"></div>
+    <button id="restart-button">Restart Game</button>
+
+  </div>
+
+  <script src="hangman.js"></script>
+</body>
 
 </html>
