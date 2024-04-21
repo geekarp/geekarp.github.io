@@ -5,7 +5,7 @@ const successEl = document.getElementById('success');
 const restartButton = document.getElementById('restartButton');
 
 function updateContent(newText) {
-  storyContentEl.textContent = newText;
+  storyContentEl.innerHTML = newText;
   choicesEl.innerHTML = ""; // Clear choices to prevent duplicates
 }
 
@@ -54,4 +54,18 @@ const choice2Button = document.getElementById('choice2');
 choice2Button.addEventListener('click', () => {
   updateContent(`You bolster your defenses, fortifying the system's firewall and deploying additional security measures to ward off the impending threat. As you prepare for battle, you receive a warning signal—a breach in the system's perimeter. The virus has infiltrated the system, launching a full-scale assault on your defenses. How will you respond?
 
-  <button class="choice-button" id="choiceB1">Rally your antivirus allies and coordinate a coordinated counter
+  <button class="choice-button" id="choiceB1">Rally your antivirus allies and coordinate a coordinated counterattack against the virus.</button>
+  <button class="choice-button" id="choiceB2">Engage the virus in a tactical defense, using your enhanced defenses to repel its advances.</button>`);
+
+  const choiceB1Button = document.getElementById('choiceB1');
+  choiceB1Button.addEventListener('click', () => {
+    updateContent(`You rally your fellow antivirus programs, forming a united front against the virus threat. Together, you launch a coordinated counterattack, targeting the virus's weak points and exploiting vulnerabilities in its code. With each strike, you gain ground against the virus, driving it back until it is finally defeated. Congratulations! You and your antivirus allies have successfully thwarted the virus's attack and preserved the integrity of the digital world.`);
+    successEl.style.display = 'block'; // Display success screen
+  });
+
+  const choiceB2Button = document.getElementById('choiceB2');
+  choiceB2Button.addEventListener('click', () => {
+    updateContent(`You engage the virus in a tactical defense, utilizing your enhanced defenses to repel its advances. Despite the virus's relentless onslaught, your fortified perimeter holds strong, thwarting every attempt to breach your defenses. With each failed attack, the virus weakens, eventually retreating from the system in defeat. Victory is yours! Congratulations on successfully defending the digital world!`);
+    successEl.style.display = 'block'; // Display success screen
+  });
+});
