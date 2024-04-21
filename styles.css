@@ -29,11 +29,7 @@ h1 {
 
 .story-content {
   margin-bottom: 20px;
-}
-
-p {
-  font-size: 1em;
-  line-height: 1.5; /* Adjust line height for readability */
+  display: none; /* Initially hide the story content */
 }
 
 .choices {
@@ -54,4 +50,23 @@ p {
 
 .choice-button:hover {
   background-color: #e6a90b; /* Darker orange on hover */
+}
+
+.success {
+  display: none; /* Initially hide the success screen */
+  text-align: center;
+}
+
+.success h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #2ecc71; /* Green success message */
+}
+
+.success p {
+  margin-bottom: 20px;
+}
+
+#restartButton {
+  background-color: #3498db; /* Light blue button */
 }
